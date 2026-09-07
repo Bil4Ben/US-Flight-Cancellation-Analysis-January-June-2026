@@ -1,13 +1,15 @@
-✈️ USA Flight Cancellation Analysis — January–June 2026
-📌 Project Overview
-This project analyzes flight cancellations across the United States (USA) from January–June 2026).
-The objective is to identify patterns cancellation and determine whether cancellation rates differ according to factors such as airline, origin airport, route, departure time, day of the week, and month.
-The analysis was performed using Python, Pandas, and Matplotlib to transform a large U.S. flight dataset into meaningful operational insights.
+USA Flight Cancellation Analysis — January–June 2026
+
+Project Overview
+This project analyzes flight cancellations across the United States (USA) from January–June 2026). The objective is to identify patterns cancellation and determine whether cancellation rates differ according to factors such as airline, origin airport, route, departure time, day of the week, and month. The analysis was performed using Python, Pandas, and Matplotlib to transform a large U.S. flight dataset into meaningful operational insights.
+
 Data Source
-The data used in this project comes from the U.S. Department of Transportation (USDOT), Bureau of Transportation Statistics (BTS).
-The dataset contains information about scheduled flights operating within the United States, including flight dates, airlines, origin and destination airports, departure times, and cancellation status.
+The data used in this project comes from the U.S. Department of Transportation (USDOT), Bureau of Transportation Statistics (BTS). The dataset contains information about scheduled flights operating within the United States, including flight dates, airlines, origin and destination airports, departure times, and cancellation status.
+
 Data Period [January 2026 – June 2026]
+
 Geographic Scope [United States (USA)]
+
 Key Variables Used
 •	FL_DATE — Flight date
 •	DAY_OF_WEEK — Day of the week
@@ -17,6 +19,7 @@ Key Variables Used
 •	DEST — Destination airport
 •	OP_CARRIER — Operating carrier
 •	CANCELLED — Flight cancellation indicator
+
 Objectives
 The main objectives of this analysis were to:
 •	Measure flight cancellation rates across the USA.
@@ -26,16 +29,18 @@ The main objectives of this analysis were to:
 •	Examine cancellation rates across different days of the week.
 •	Analyze monthly changes in U.S. cancellation rates.
 •	Identify areas where cancellation risk appears to be concentrated.
+
 Tools & Technologies
 •	Python 3, Pandas, Matplotlib
 •	Git & GitHub — project documentation and version control
+
 Key Findings
 1. Cancellation Rates Differ by Airline
-The analysis shows that cancellation rates are not evenly distributed across U.S. airlines.
-Some carriers have noticeably higher cancellation rates than others, indicating that airline-specific operational factors may influence the likelihood of a flight being cancelled.
+The analysis shows that cancellation rates are not evenly distributed across U.S. airlines. Some carriers have noticeably higher cancellation rates than others, indicating that airline-specific operational factors may influence the likelihood of a flight being cancelled.
+![Airline Cancellation Rate](images/cancellation_carrier.png)
 Insight
 Cancellation risk varies across U.S. carriers, suggesting that airline-level operational performance may be an important factor in flight reliability.
-________________________________________
+
 2. Cancellation Rates Differ by Origin Airport
 Cancellation rates also vary considerably between U.S. departure airports.
 Some airports show higher cancellation rates than others, suggesting that airport-level factors may contribute to flight disruptions.
@@ -45,10 +50,12 @@ Possible factors include:
 •	Operational capacity
 •	Traffic volume
 •	Local scheduling patterns
+
 Insight
 Flight cancellations are geographically concentrated, with some U.S. origin airports experiencing higher cancellation rates than others.
 
 3. Evening Flights Have Higher Cancellation Rates
+
 Departure time shows a noticeable pattern across U.S. flights.
 Cancellation rates increase during the evening, particularly between approximately 17:00 and 22:00.
 The highest observed rates among the major flight-volume hours were approximately:
@@ -58,7 +65,9 @@ Some overnight hours also produced relatively high percentages, but those hours 
 Insight
 U.S. flight cancellation rates tend to increase during evening departure hours, with the highest rates occurring around 9–10 PM.
 One possible explanation is the cumulative effect of earlier delays and operational disruptions throughout the day.
+
 4. Cancellation Rates Follow a Weekly Pattern
+
 A strong day-of-week pattern was observed across U.S. flights.
 Day	Cancellation Rate
 Monday	3.42%
@@ -72,12 +81,16 @@ Sunday had the highest cancellation rate at approximately 3.90%, followed by Mon
 Cancellation rates declined substantially during the middle of the week, reaching the lowest level on Thursday at approximately 1.01%.
 Insight
 U.S. flight cancellation risk follows a clear weekly cycle, with the highest rates on Sunday and Monday and the lowest rates around the middle of the week.
+
 5. Cancellation Rates Vary Across Routes
+
 Cancellation rates also differ across U.S. flight routes.
 Some origin-destination combinations experience more cancellations than others, showing that cancellation risk is not evenly distributed throughout the U.S. flight network.
 Insight
 Certain U.S. routes appear to carry higher cancellation risk, indicating that route-level analysis can reveal patterns that overall cancellation statistics hide.
+
 6. Cancellation Rates Vary Significantly by Month
+
 The monthly analysis produced one of the clearest temporal patterns in the U.S. flight data.
 Month	Flights	Cancellations	Cancellation Rate
 January	544,003	25,635	4.71%
@@ -103,6 +116,7 @@ The strongest temporal patterns were:
 These patterns suggest that cancellation risk is influenced by a combination of temporal, geographic, route-level, and airline-specific factors.
 
 Business Implications
+
 The findings could be useful for airlines, airports, and passengers in the U.S. aviation industry. Airlines could investigate high-risk departure periods and routes to identify operational bottlenecks.
 U.S. airports with consistently high cancellation rates could be examined for congestion, capacity, weather, or other operational issues.
 Passengers may benefit from understanding that cancellation risk can vary depending on the day, departure time, airline, airport, and route.
@@ -117,20 +131,21 @@ Potential features could include:
 •	Route
 •	Scheduled departure time
 •	Historical cancellation rate
+
 Future Work
 The next stage of the project could involve building a machine learning classification model to predict whether a U.S. flight will be cancelled. Possible models include: Logistic Regression, Decision Tree, Random Forest, and XGBoost
 Project Structure
-notebooks/
--	jan-Jun-us-flight-cancelled.ipynb
-images/
--	cancellation_balance.png
--	cancellation_by_departure_hour.png
--	cancellation_carrier.png
--	montly_cancellation.png
--	origin_cancellation.png
--	rate_by_date.png
+- notebooks/
+    - jan-Jun-us-flight-cancelled.ipynb
+- images/
+    -	cancellation_balance.png
+    -	cancellation_by_departure_hour.png
+    -	cancellation_carrier.png
+    -	montly_cancellation.png
+    -	origin_cancellation.png
+    -	rate_by_date.png
+- README.md
 
-README.md
 Cancellation Rate Calculation
 cancellation_rate = cancellations / total_flights
 For example, the day-of-week analysis was created using:
