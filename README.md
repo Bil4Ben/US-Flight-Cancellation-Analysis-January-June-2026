@@ -95,19 +95,6 @@ The rate dropped substantially in February, increased again in March, and then f
 
 January experienced the highest U.S. flight cancellation rate, while cancellation rates were substantially lower during April and May, indicating significant variation across the first half of 2026.
 
-### Conclusions
-The analysis demonstrates that U.S. flight cancellations are not randomly distributed. Cancellation rates vary according to several dimensions:
-Airline → Airport → Route → Departure Time → Day of Week → Month
-
-The strongest temporal patterns were:
-- January had the highest monthly cancellation rate.
-- Sunday and Monday had the highest weekly cancellation rates.
-- Evening flights, particularly around 9–10 PM, showed higher cancellation rates.
-- Some U.S. airports and routes experienced substantially higher cancellation rates than others.
-- Cancellation rates differed considerably between airlines.
-
-These patterns suggest that cancellation risk is influenced by a combination of temporal, geographic, route-level, and airline-specific factors.
-
 ### Business Implications
 The findings could be useful for airlines, airports, and passengers in the U.S. aviation industry. Airlines could investigate high-risk departure periods and routes to identify operational bottlenecks.
 U.S. airports with consistently high cancellation rates could be examined for congestion, capacity, weather, or other operational issues.
@@ -153,6 +140,7 @@ days['cancellation_rate'] = (
 This calculates the total number of flights and cancellations for each day and then determines the proportion of flights that were cancelled.
 
 ### Conclusion
-U.S. flight cancellations during January–June 2026 show clear patterns across airlines, airports, routes, departure times, days of the week, and months. The highest cancellation risk was observed in January, on Sundays and Mondays, and during evening departure hours.
-This analysis demonstrates how exploratory data analysis (EDA) can uncover operational patterns hidden within a large U.S. aviation dataset and provide a foundation for future flight-cancellation prediction.
+U.S. flight cancellations during January–June 2026 show clear patterns across airlines, airports, routes, departure times, days of the week, and months. The highest cancellation rates were observed in January, on Sundays and Mondays, and during late-evening departure hours.
+
+Overall, the analysis shows that cancellation rates are not evenly distributed across the U.S. flight network. They vary across temporal, geographic, route-level, and airline-specific dimensions. These findings demonstrate how exploratory data analysis can uncover meaningful patterns in a large aviation dataset and provide a foundation for further investigation and flight-cancellation prediction.
 
